@@ -57,6 +57,7 @@ app.get("/listings/:id", async (req, res) => {
 
 app.post("/listings", async (req, res) => {
   const newListing = new Listing(req.body.listing);
+  console.log(req.body.listing);
   await newListing.save();
   res.redirect("/listings");
 });
@@ -87,9 +88,9 @@ app.delete("/listings/:id", async (req, res) => {
 // app.get("/testListing", async (req,res)=>{
 //     let sampleListing = new Listing({
 //         title:"Beautiful Sky View",
-//         description : "A beautiful sky view in Laddakh, Must visit!",
+//         description : "A beautiful sky view in Ladakh, Must visit!",
 //         price : 5000,
-//         location : "Laddakh",
+//         location : "Ladakh",
 //         country : "India",
 //     });
 //     await sampleListing.save();
