@@ -8,22 +8,10 @@ const listingSchema = new Schema({
     require: true,
   },
   description: String,
-  image: String,
-  // url: String,
-  // filename: String,
-  // filename: {
-  //   type: String,
-  // },
-  // url: {
-  //   type: String,
-  //   default:
-  //     "https://unsplash.com/photos/sky-phenomenon-above-pine-trees-near-body-of-water-s8Rg2rBpm9Y",
-  //   set: (v) =>
-  //     v === ""
-  //       ? " https://unsplash.com/photos/sky-phenomenon-above-pine-trees-near-body-of-water-s8Rg2rBpm9Y"
-  //       : v,
-  // },
-
+  image: {
+    url: String,
+    filename: String,
+  },
   price: Number,
   location: String,
   country: String,
