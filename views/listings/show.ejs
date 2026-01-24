@@ -40,7 +40,7 @@
 
         </div>
 
-        <div class="col-8 offset-2 mb-3">
+        <div class="col-6 offset-3 mb-3">
             <hr>
             <% if(currUser) {%>
                 <h4>Leave a Review</h4>
@@ -81,7 +81,7 @@
                             <br> <br>
 
                             <% for(let review of listing.reviews){ %>
-                                <div class="card review-card col-5 mb-3 ms-5">
+                                <div class="card review-card col-6 mb-3 ms-5">
                                     <div class="card-body mt-3">
                                         <h5 class="card-title">@<%= review.author.username %>
                                         </h5>
@@ -102,13 +102,14 @@
                         </div>
                         <hr>
                         <% } %>
-                         <h4>Where you'll go</h4>
-                         <br>
-                            <div class="row offset-2">
-                                <div id="map"></div>
+                            <h4>Where you'll go</h4>
+                            <br>
+                            <div class="row">
+                                <div id="map" data-location="<%= listing.location %>" data-title="<%= listing.title %>"
+                                    data-price="<%= listing.price %>">
+                                </div>
                             </div>
 
         </div>
 
     </div>
-    
