@@ -81,11 +81,19 @@
                             <br> <br>
 
                             <% for(let review of listing.reviews){ %>
-                                <div class="card review-card col-6 mb-3 ms-5">
-                                    <div class="card-body mt-3">
-                                        <h5 class="card-title">@<%= review.author.username %>
-                                        </h5>
-                                        <p class="starability-result card-text" data-rating=<%=review.rating %>></p>
+                                <div class="card review-card col-2 mb-3">
+                                    <div class="card-body review-card-body">
+                                        <div class="review-author-profile">
+                                            <div class="profile-pic">
+                                                <%= review.author.username[0] %>
+                                            </div>
+                                            <div class="username-star-container">
+                                                <p class="card-title review-card-title">@<%= review.author.username %>
+                                                </p>
+                                                <p class="starability-result" data-rating="<%= review.rating %>"></p>
+                                            </div>
+
+                                        </div>
                                         <p class="card-text">
                                             <%= review.comment %>
                                         </p>
