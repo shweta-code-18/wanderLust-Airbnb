@@ -1,0 +1,87 @@
+<div id="filters">
+    <!-- LEFT ARROW -->
+    <button class="scroll-btn left" onclick="scrollFilters(-200)">
+        ❮
+    </button>
+    <div class="filters-scroll" id="filtersScroll">
+        <div class="filter">
+            <div><i class="fa-solid fa-fire"></i></div>
+            <p>Trending</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-bed"></i></div>
+            <p>Rooms</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-mountain-city"></i></div>
+            <p>Iconic cities</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-mountain"></i></div>
+            <p>Mountain</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-umbrella-beach"></i></div>
+            <p>Beach</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-person-swimming"></i></div>
+            <p>Amazing pool</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-campground"></i></div>
+            <p>Camping</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-tractor"></i></div>
+            <p>Farms</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-wifi"></i></div>
+            <p>Free Wi-Fi</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-igloo"></i></div>
+            <p>Domes</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-ghost"></i></div>
+            <p>Horror</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-snowflake"></i></div>
+            <p>Arctic</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-volcano"></i></div>
+            <p>Volcano</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-church"></i></div>
+            <p>Church</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-ship"></i></div>
+            <p>Boats</p>
+        </div>
+    </div>
+
+    <!-- RIGHT ARROW -->
+    <button class="scroll-btn right" onclick="scrollFilters(200)">
+        ❯
+    </button>
+
+    <div class="tax-toggle">
+        <div class="form-check form-switch form-check-reverse">
+            <input class="form-check-input" type="checkbox" id="switchCheckReverse">
+            <label class="form-check-label" for="switchCheckReverse">Display after taxes</label>
+        </div>
+    </div>
+</div>
+
+<script>
+    function scrollFilters(value) {
+        document.getElementById("filtersScroll")
+            .scrollBy({ left: value, behavior: "smooth" });
+    }
+</script>
