@@ -8,6 +8,10 @@ const multer = require("multer");
 const { storage } = require("../cloudConfig.js");
 const upload = multer({ storage });
 
+router.route("/country").get(wrapAsync(listingController.filterByCountry));
+
+router.route("/filter").get(wrapAsync(listingController.filterBy));
+
 router
   .route("/")
   .get(wrapAsync(listingController.index))

@@ -231,6 +231,11 @@ body {
   flex-wrap: wrap;
   align-items: center;
   padding: 1rem;
+
+  position: sticky;
+  top: 5rem; /* same as navbar height */
+  z-index: 999;
+  background-color: #ffffff;
 }
 
 /* SCROLL CONTAINER */
@@ -321,4 +326,20 @@ body {
 .search-inp {
   border-radius: 25px !important;
   padding: 0.5rem 3rem 0.5rem 3rem !important;
+}
+
+
+/* Tags */
+
+.tag{
+    opacity: 0.4;
+    padding: 0.3rem;
+}
+
+.selected{
+    opacity: 1 !important;
+}
+
+.hide{
+    display: none;
 }

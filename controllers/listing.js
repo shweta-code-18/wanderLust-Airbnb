@@ -5,6 +5,23 @@ module.exports.index = async (req, res) => {
   res.render("listings/index.ejs", { allListings });
 };
 
+module.exports.filterByCountry = async (req, res) => {
+  let CountryName = req.query.CountryName.trim();
+  console.log(req.query.CountryName);
+
+  const allListings = await Listing.find({
+    country: { $regex: CountryName, $options: "i" },
+  });
+
+  res.render("listings/index.ejs", { allListings, CountryName });
+};
+
+module.exports.filterBy = async (req, res) => {
+  let { by } = req.query;
+  const allListings = await Listing.find({ tags: by });
+  res.render("listings/index.ejs", { allListings, by });
+};
+
 module.exports.renderNewForm = (req, res) => {
   res.render("listings/new.ejs");
 };
@@ -44,7 +61,7 @@ module.exports.renderEditForm = async (req, res) => {
 
   let originalImgUrl = listing.image.url;
   originalImgUrl = originalImgUrl.replace("/upload", "/upload/h_300,w_250");
-  res.render("listings/edit.ejs", { listing , originalImgUrl});
+  res.render("listings/edit.ejs", { listing, originalImgUrl });
 };
 
 module.exports.updateListing = async (req, res) => {

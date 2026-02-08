@@ -20,3 +20,22 @@
     );
   });
 })();
+
+
+let tags = document.querySelectorAll(".tag");
+
+tags.forEach(tag => {
+  tag.addEventListener("click", function() {
+    this.classList.toggle('selected');
+    console.log("tapped");
+  });
+});
+
+
+let filters = document.querySelectorAll(".filter");
+filters.forEach(filter => {
+  filter.addEventListener("click", function() {
+    let filterFor = this.children[1].innerText ;
+    window.location.href = `/listings/filter?by=${filterFor}`;
+  })
+})

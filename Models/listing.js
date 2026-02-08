@@ -1,16 +1,17 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const Review = require("./review.js");
+const { required } = require("joi");
 
 const listingSchema = new Schema({
   title: {
     type: String,
-    require: true,
+    required: true,
   },
 
   description: {
     type: String,
-    require: true,
+    required: true,
   },
 
   image: {
@@ -20,18 +21,18 @@ const listingSchema = new Schema({
 
   price: {
     type: Number,
-    require: true,
+    required: true,
     min: 0,
   },
 
   location: {
     type: String,
-    require: true,
+    required: true,
   },
 
   country: {
     type: String,
-    require: true,
+    required: true,
   },
 
   reviews: [

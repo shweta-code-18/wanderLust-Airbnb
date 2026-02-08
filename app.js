@@ -22,6 +22,8 @@ const userRouter = require("./routes/user.js");
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 
+// const dbUrl = process.env.ATLASDB_URL;
+
 main()
   .then(() => {
     console.log("Connected");
@@ -53,9 +55,6 @@ const sessionOptions = {
   },
 };
 
-// app.get("/", (req, res) => {
-//   res.send("Hello I am root");
-// });
 
 app.use(session(sessionOptions));
 app.use(flash());
