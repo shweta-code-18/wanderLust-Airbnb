@@ -88,6 +88,12 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/review", reviewRouter);
 app.use("/", userRouter);
 
+// root route 
+app.all(/.*/,(req,res,next) => {
+    res.redirect("/listings");
+    // next(new ExpressError(404,"Page Not Found!"));
+});
+
 app.use((req, res, next) => {
   next(new ExpressError(404, "Page Not Found"));
 });
@@ -97,6 +103,8 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error.ejs", { message });
   // res.status(statusCode).send(message);
 });
+
+
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
