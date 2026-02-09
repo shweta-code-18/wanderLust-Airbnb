@@ -105,6 +105,15 @@ body {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .listing-card {
+    margin: 0 auto;
+    max-width: 360px;
+    margin-bottom: 2rem;
+  }
+}
+
+
 .card-img-top {
   border-radius: 1rem !important;
   width: 100% !important;
