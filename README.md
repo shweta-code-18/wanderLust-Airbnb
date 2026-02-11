@@ -1,11 +1,11 @@
-🌍 **Wanderlust – Airbnb Clone**
+# 🌍 Wanderlust – Airbnb Clone
 
 ***Wanderlust is a full-stack web application inspired by Airbnb. It allows users to explore, create, and manage property listings with secure authentication, image uploads, and user reviews. The project is built to simulate real-world full-stack development using modern web technologies.***
 
 🔗 Live Demo: https://wanderlust-airbnb-ipze.onrender.com
 
 
-✨ **Features**
+# ✨ **Features**
  
  * User Authentication & Authorization
 
@@ -40,8 +40,8 @@
  * Secure session management
 
 
-🛠 **Tech Stack**
- * Frontend
+# 🛠 Tech Stack
+ ### Frontend
 
    - HTML5
 
@@ -53,96 +53,75 @@
 
    - Bootstrap
 
-* Backend
+### Backend
 
    - Node.js
 
    - Express.js
    - RESTful APIs
 
-* Database
+### Database
 
    - MongoDB
 
    - Mongoose
 
- * Authentication & Security
+ ### Authentication & Security
 
    - Passport.js
    - Session-based authentication
 
- * Maps & Media
+ ### Maps & Media
 
    - Leaflet (Map integration)
 
    - Cloudinary (Image upload and management)
 
- * Architecture
+ ### Architecture
 
    - MVC (Model–View–Controller)
 
- * Version Control
+ ### Version Control
 
    - Git
 
    - GitHub
 
- * Deployment
+ ### Deployment
 
    - Render
 
 
-📂 **Project Structure**
-
+# 📂 Project Structure
+```
 wanderlust/
-
 │
-
 ├── Init/                   #Database initialization and seed files
-
 ├── Models/                 #Mongoose models
-
 ├── controllers/            #Controller logic for routes
-
 ├── public/                 #Static assets (CSS, JS, images)
-
 ├── routes/                 #Express route definitions
-
 ├── utils/                  #Utility and helper functions
-
 ├── views/                  #EJS templates
-
 │   ├── includes/           #Reusable UI components
-
 │   ├── layouts/            #Layout templates
-
 │   ├── listings/           #Listing-related views
-
 │   ├── users/              #User authentication views
-
 │   └── error.ejs           #Error handling view
-
 │
-
 ├── .gitignore             #Git ignored files
-
 ├── app.js                 #Main application entry point
- 
 ├── cloudConfig.js         #Cloudinary configuration
-
 ├── middleware.js          #Custom middleware functions
-
 ├── schema.js              #Joi schemas for validation
-
 ├── package.json           #Project metadata and dependencies
-
 ├── package-lock.json      #Dependency lock file
 
+```
 
 
 
-
-🔍 **Folder Overview**
+# 🔍 Folder Overview
 
   * Init – Handles database initialization and sample data setup
 
@@ -162,7 +141,7 @@ wanderlust/
 
 
 
-⚙️ **Installation & Setup**
+# ⚙️ Installation & Setup
 
   ***Clone the repository***
 
@@ -199,7 +178,7 @@ wanderlust/
 
 
 
-🎯 **Learning Outcomes**
+# 🎯 Learning Outcomes
 
   - Gained hands-on experience in full-stack web development
 
@@ -213,7 +192,7 @@ wanderlust/
 
 
 
-🚧 **Future Enhancements**
+# 🚧 Future Enhancements
 
   - Advanced search and filter options
 
@@ -225,7 +204,7 @@ wanderlust/
 
   - Admin dashboard
 
-👩‍💻 **Author**
+# 👩‍💻 Author
 
 **Shweta Kumari |**
 **Full-Stack Web Developer**
